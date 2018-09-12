@@ -10,13 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.file_field :image %>
 <% end %>
+
+<script type="text/javascript">
+  $("#post_image").change(function(){
+    $("form").submit();
+  });
+</script>

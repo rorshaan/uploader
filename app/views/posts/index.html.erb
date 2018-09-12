@@ -1,26 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<h4>A fast and easy way to capture your claim photos and documents</h4>
+<div>
+  <span>Photos upload/capture</span>
+</div>
+<div>
+  <div class="image">
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.name %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="insert-image col-md-6 col-sm-6 col-xs-12 col-lg-6">
+        <div class="overlay-image-circle">
+          <%= image_tag post.image.url(:medium) %>
+        </div>
+        <%= image_tag post.image.url(:medium) %>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+    <%= render 'form', post: @post %>
+  </div>
+</div>

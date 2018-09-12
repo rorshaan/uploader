@@ -1,0 +1,11 @@
+
+.insert-image {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.overlay-image-circle{
+  background-image: url("/assets/circle.jpeg");
+}
+.overlay-image-add{
+  background-image: url("/assets/add.jpeg");
+}

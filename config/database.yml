@@ -1,10 +1,8 @@
-default: &default
- adapter: postgresql
- encoding: unicode
- username: root
- password: root
- pool: 5
-
 development:
- <<: *default
- database: uploader
+  adapter: postgresql
+  #database: iqglobal_production_13Aug2018
+  database: uploader
+  host: localhost
+  username: postgres
+  password: postgres
+  encoding: utf8

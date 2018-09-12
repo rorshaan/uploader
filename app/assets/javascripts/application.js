@@ -15,3 +15,7 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$("#post_image").change(function(){
+  $("form").submit();
+});
